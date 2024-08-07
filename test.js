@@ -1,34 +1,19 @@
-import { useState } from "react"
+const arr= [1,1,2, 3, 4,5,6,6, 6 ,7,7 , 9]
 
-
-function App() {
-  const [color, setColor] = useState("olive")
-
-  return (
-    <div className="w-full h-screen duration-200"
-    style={{backgroundColor: color}}
-    >
-      <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
-        <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl">
-          <button
-          onClick={() => setColor("red")}
-          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
-          style={{backgroundColor: "red"}}
-          >Red</button>
-          <button
-          onClick={() => setColor("green")}
-          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
-          style={{backgroundColor: "green"}}
-          >Green</button>
-          <button
-          onClick={() => setColor("blue")}
-          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
-          style={{backgroundColor: "blue"}}
-          >Blue</button>
-        </div>
-      </div>
-    </div>
-  )
+const minArr =(arr) => {
+  let min= arr[0]
+  arr.map((arr) => {
+    arr  < min ? (min=arr) : min
+  } )
+  return min
 }
+console.log(minArr)
 
-export default App
+
+
+
+
+
+
+// const Dup = arr.filter((ele , index , arr) => arr.indexOf(ele) != index)
+// console.log(Dup)
