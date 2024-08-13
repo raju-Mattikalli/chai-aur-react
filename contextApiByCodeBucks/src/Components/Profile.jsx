@@ -8,7 +8,7 @@ function Profile() {
 
 
     if(user){
-      return <span>{user.name}</span>
+      return <span className='text-white'>{user.name}</span>
     }
     else{
       return <span>Login</span>
